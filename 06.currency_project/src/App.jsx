@@ -23,7 +23,7 @@ return (
         <div
             className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
             style={{
-                backgroundImage: `url('https://www.pexels.com/photo/serene-sunrise-at-a-quiet-lakeside-pier-32949147/')`,
+                backgroundImage: `url('https://www.pexels.com/photo/design-of-white-walls-12117991/')`,
             }}
         >
             <div className="w-full">
