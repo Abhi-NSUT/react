@@ -1,5 +1,4 @@
 import { useCallback, useState ,useEffect,useRef} from 'react'
-import './App.css'
 
 function App() {
   const[length,setLength]=useState(8);
@@ -21,9 +20,11 @@ function App() {
   useEffect(()=>{
     passwordGenerator()
   },[length,numberallowed,charallowed,passwordGenerator])
+
+
   const copypasswordtoclipboard=useCallback(()=>{
     passwordref.current?.select()
-    passwordref.current?.setSelectionRange(0,5)
+    passwordref.current?.setSelectionRange(0,length)
     window.navigator.clipboard.writeText(password)
   },[password])
   return (
@@ -58,7 +59,9 @@ function App() {
             onChange={()=>{
               setnumberallowed((prev)=>!prev)
             }}
-          />
+          />   
+{ /*this html for is used to mark like this label number belongs to element with id number input 
+u can toggle checkbox by clicking on number text */  }   
           <label htmlFor='numberInput'>Number</label>
         </div>
         <div className='flex items-center gap-x-1'>
